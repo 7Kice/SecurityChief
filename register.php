@@ -8,7 +8,7 @@
     </head>
     <body>
     <div class="LoginContainer">
-        <form class="LoginForm" action="action-login.php" method="POST">
+        <form class="LoginForm" action="action-register.php" method="POST">
             <h1>Username</h1><input type="text" class="Username" name="Username" placeholder="Username" required>
             <h1>Password</h1><input type="password" class="Password" name="Password" placeholder="Password" required>
             <br>

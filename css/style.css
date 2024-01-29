@@ -60,7 +60,7 @@ footer {
     margin: 0;
 }
 
-.LoginForm > input[type="text"]{
+.LoginForm > input[type="text"], .LoginForm > input[type="password"]{
     width: 220px;
     height: 1.5rem;
     padding: 0.5rem;
