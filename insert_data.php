@@ -1,6 +1,6 @@
 <?php
-require_once('config.php');
-
+require_once('connection.php');
+require("create-database.php");
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect form data
@@ -11,9 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $websiteUrl = $_POST["websiteUrl"];
 
     // Insert data into the table
-    $sql = "INSERT INTO contact_form (email, firstName, lastName, companyName, websiteUrl) VALUES ('$email', '$firstName', '$lastName', '$companyName', '$websiteUrl')";
+    $sql = "INSERT INTO security_test (email, firstName, lastName, companyName, websiteUrl) VALUES ('$email', '$firstName', '$lastName', '$companyName', '$websiteUrl')";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($db_conna->query($sql) === TRUE) {
         echo "Data inserted successfully!";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
@@ -21,5 +21,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Close the connection
-$conn->close();
+$db_conn->close();
 ?>
