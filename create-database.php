@@ -1,4 +1,7 @@
 <?php
+$servername = "localhost";
+$username = "root";
+$password = "";  
 $dbname = "SecurityChief";
 
 $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
