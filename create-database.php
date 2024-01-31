@@ -1,4 +1,5 @@
 <?php
+$dbname = "SecurityChief";
 
 $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 if ($conn->query($sql) === TRUE) {
