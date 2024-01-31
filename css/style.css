@@ -324,12 +324,12 @@ button:hover {
     margin: auto;
     height: 75%;
     width: 75%;
-    background-color:gray;
     border-radius: 6px;
     display: grid;
     grid-template-rows: 2rem 1fr;
     gap: 5px;
     padding: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 1);
 }
 
 .PanelName{

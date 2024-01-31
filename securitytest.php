@@ -49,7 +49,9 @@
     <div class="container">
         <h2>Cybersecurity test</h2>
 
-        <?php include('insert_data.php'); ?>
+        <?php include('insert_data.php'); 
+        require("create-database.php");
+        ?>
 
         <?php
         // Check if the form is submitted
