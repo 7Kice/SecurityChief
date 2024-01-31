@@ -50,36 +50,31 @@ main {
     padding: 20px;
 }
 
-.wrapper {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px; /* Adjust the maximum width of the wrapper if needed */
-    margin: 0 auto;
-    padding: 20px;
-}
-
 .info {
     display: flex;
-    flex-direction: column;
-    max-width: 800px;
+    justify-content: center; /* Center-align the content within the container */
+    flex-wrap: wrap;
+    flex-grow: 1;
 }
 
 .box {
-    width: 100%;
-    margin: 20px 0;
+    width: 400px;
+    margin: 20px 10px;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: var(--SecondaryColor);
-    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--SecondaryColor); /* Background color */
+    color: #ffffff; /* Text color */
 }
 
 .box-title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: center; /* Center the title */
 }
 
 .box-text {
@@ -89,11 +84,11 @@ main {
 
 .container {
     max-width: 600px;
+    margin: 50px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 label {
@@ -457,39 +452,4 @@ button:hover {
     border-radius: 6px;
     padding: 10px;
     overflow-wrap: break-word;
-}
-
-
-.contact-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 50px; /* Added margin-bottom to create more space at the bottom */
-}
-
-.contact-container form {
-    display: grid;
-    grid-gap: 10px;
-}
-
-.contact-container label {
-    font-weight: bold;
-}
-
-.contact-container input,
-.contact-container textarea {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-.contact-container button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
 }

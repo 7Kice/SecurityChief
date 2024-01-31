@@ -4,6 +4,6 @@
             <a href="index.php">Home</a>
             <a href="securitytest.php">Security Test</a>
             <a href="login.php">Login</a>
-            <a href="contact.php">Contact</a>
+            <a href="#">Contact</a>
         </div>
     </div>
