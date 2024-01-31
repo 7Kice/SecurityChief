@@ -64,7 +64,7 @@
         <!-- Add more social media icons as needed -->
     </div>
 
-    <p>&copy; 2024 Your Website Name. All rights reserved. | Designed by <a href="https://www.yourdesigner.com" target="_blank">Your Designer</a></p>
+    <p>&copy; 2024 Your Website Name. All rights reserved. | Designed by <a href="http://localhost/SecurityChief/#" target="_blank">Security Design Team</a></p>
     </footer>
 
     <script>
