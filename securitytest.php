@@ -50,7 +50,6 @@
             <h2>Cybersecurity test</h2>
 
             <?php 
-            require_once('connection.php');
             require("create-database.php");
             include('insert_data.php');
             ?>
