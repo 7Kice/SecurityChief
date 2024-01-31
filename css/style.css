@@ -48,14 +48,15 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    background-color: #02142B; /* Background color */
-    color: #ffffff; /* Text color */
+    background-color: #02142B;
+    color: #ffffff;
 }
 
 .box-title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center; /* Center the title */
 }
 
 .box-text {
