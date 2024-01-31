@@ -4,7 +4,7 @@ $username = "root";
 $password = "";  
 $dbname = "SecurityChief";
 
-$conn = new mysqli($servername, $username, $password,$dbname);
+$conn = new mysqli($servername, $username, $password);
 
 $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 if ($conn->query($sql) === TRUE) {
