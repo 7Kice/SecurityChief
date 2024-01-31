@@ -101,69 +101,177 @@ button:hover {
 
 /* Main Image Styles */
 .main-image {
-    background-image: url('Images/indeximage.jpg'); /* Replace with the path to your image */
+    position: relative;
+    background-image: url('Images/indeximage.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 300px; /* Adjust the height as needed */
+    height: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    max-width: 60%;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.image-overlay h2 {
+    font-size: 40px; /* Adjust the font size as needed */
+    margin-bottom: 10px;
+}
+
+.image-overlay p {
+    font-size: 20px; /* Adjust the font size as needed */
+    line-height: 1.4;
+    margin-bottom: 0;
 }
 
 /* Grid Styles */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    padding: 20px;
+    margin-top: 20px; /* Adjust the top margin as needed */
+    margin-bottom: 20px; /* Adjust the bottom margin as needed */
+    max-width: 60%; /* Adjust the maximum width as needed */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grid-item {
+    flex: 0 0 calc(25% - 20px); /* Adjust the width of each item as needed */
+    max-width: calc(25% - 20px); /* Adjust the max-width as needed */
     border: 1px solid #ddd;
-    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.grid-item::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 150px; /* Adjust the height of the image as needed */
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.grid-item:nth-child(1)::before {
+    background-image: url('Images/DollarNote.png');
+}
+
+.grid-item:nth-child(2)::before {
+    background-image: url('Images/database.png');
+}
+
+.grid-item:nth-child(3)::before {
+    background-image: url('Images/Attack.png');
+}
+
+.grid-item:nth-child(4)::before {
+    background-image: url('Images/Privacy.png');
+}
+
+.grid-item h2,
+.grid-item p {
+    position: relative; /* Ensure z-index works */
+    z-index: 1; /* Move text content above the pseudo-element */
+    padding: 10px;
+    margin: 0;
     text-align: center;
 }
 
-
-/* Grid Styles */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.grid-item {
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
+.grid-item:hover {
+    transform: scale(1.05);
 }
 
 /* FAQ Styles */
 .faq-container {
+    max-width: 800px;
+    margin: auto; /* Center horizontally and vertically */
     padding: 20px;
-    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center text */
 }
-
 .faq-question {
     cursor: pointer;
-    color: #333;
-    margin-bottom: 5px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
 }
 
-.answer {
+.faq-answer {
     display: none;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.faq-item.active .answer {
-    display: block;
+.faq-question.active {
+    background-color: #ddd;
 }
 
-footer {
+.faq-question::after {
+    content: "\02795"; /* Unicode character for "plus" sign (+) */
+    font-size: 18px;
+    color: #555;
+    float: right;
+    margin-left: 5px;
+}
+
+.faq-question.active::after {
+    content: "\02212"; /* Unicode character for "minus" sign (-) */
+}
+
+/* Footer Styles */
+.footer {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 20px 0;
     text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
+.footer p {
+    margin: 15px 0 0; /* Adjust the top margin for spacing */
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer-icons a:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+}
