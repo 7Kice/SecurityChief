@@ -17,33 +17,65 @@
             <div class="AdminContent">
                 <?php
                 require("connection.php");
-                // Fetch data from the database
                 $sql = "SELECT firstName, lastName, websiteUrl, companyName FROM security_test";
                 $result = $conn->query($sql);
-
-                // Display the data in respective div elements
-                while ($row = $result->fetch_assoc()) {
-                    echo '<div class="FirstName">
+                ?>
+                <div class="FirstName">
                     <h2 class="FirstNameText">First name</h2>
-                    <h2 class="FirstNameData">' . $row['firstName'] . '</h2>
-                </div>';
-                    echo '<div class="LastName">
-                    <h2 class="LastNameText">Last name</h2>
-                    <h2 class="LastNameData">' . $row['lastName'] . '</h2>
-                </div>';
-                    echo '<div class="WebsiteURL">
-                    <h2 class="WebsiteURLText">WebsiteURL</h2>
-                    <h2 class="WebsiteURLData">' . $row['websiteUrl'] . '</h2>
-                </div>';
-                    echo '<div class="CompanyName">
-                    <h2 class="CompanyNameText">Company name</h2>
-                    <h2 class="CompanyNameData">' . $row['companyName'] . '</h2>
-                </div>';
-                }
+                    <h2 class="FirstNameData">
+                        <?php
+                        $result->data_seek(0);
 
-                // Close connection
+                        while ($row = $result->fetch_assoc()) {
+                            echo $row['firstName'] . "<br>";
+                        }
+                        ?>
+                    </h2>
+                </div>
+
+                <div class="LastName">
+                    <h2 class="LastNameText">Last name</h2>
+                    <h2 class="LastNameData">
+                        <?php
+                        $result->data_seek(0);
+
+                        while ($row = $result->fetch_assoc()) {
+                            echo $row['lastName'] . "<br>";
+                        }
+                        ?>
+                    </h2>
+                </div>
+
+                <div class="WebsiteURL">
+                    <h2 class="WebsiteURLText">WebsiteURL</h2>
+                    <h2 class="WebsiteURLData">
+                        <?php
+                        $result->data_seek(0);
+
+                        while ($row = $result->fetch_assoc()) {
+                            echo $row['websiteUrl'] . "<br>";
+                        }
+                        ?>
+                    </h2>
+                </div>
+
+                <div class="CompanyName">
+                    <h2 class="CompanyNameText">Company name</h2>
+                    <h2 class="CompanyNameData">
+                        <?php
+                        $result->data_seek(0);
+
+                        while ($row = $result->fetch_assoc()) {
+                            echo $row['companyName'] . "<br>";
+                        }
+                        ?>
+                    </h2>
+                </div>
+
+                <?php
                 $conn->close();
                 ?>
+
             </div>
         </div>
     </div>

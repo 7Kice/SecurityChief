@@ -102,7 +102,7 @@ button:hover {
 /* Main Image Styles */
 .main-image {
     position: relative;
-    background-image: url('Images/indeximage.jpg');
+    background-image: url('../Images/indeximage.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -168,19 +168,19 @@ button:hover {
 }
 
 .grid-item:nth-child(1)::before {
-    background-image: url('Images/DollarNote.png');
+    background-image: url('../Images/DollarNote.png');
 }
 
 .grid-item:nth-child(2)::before {
-    background-image: url('Images/database.png');
+    background-image: url('../Images/database.png');
 }
 
 .grid-item:nth-child(3)::before {
-    background-image: url('Images/Attack.png');
+    background-image: url('../Images/Attack.png');
 }
 
 .grid-item:nth-child(4)::before {
-    background-image: url('Images/Privacy.png');
+    background-image: url('../Images/Privacy.png');
 }
 
 .grid-item h2,
@@ -383,4 +383,8 @@ button:hover {
     margin: 5px;
     padding: 5px 0;
     border-radius: 6px;
+}
+
+.FirstNameData, .LastNameData, .CompanyNameData, .WebsiteURLData {
+    font-size: 1.5rem;
 }
