@@ -50,31 +50,45 @@ main {
     padding: 20px;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto; /* Two auto-sized rows for logo and content */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: start; /* Align items at the start of the grid container */
+}
+
+
 .info {
     display: flex;
-    justify-content: center; /* Center-align the content within the container */
     flex-wrap: wrap;
     flex-grow: 1;
+    grid-column: 1; /* Positioned in the first column (left side) */
 }
 
 .box {
-    width: 400px;
-    margin: 20px 10px;
+    width: 100%;
+    margin-bottom: 20px;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    background-color: var(--SecondaryColor); /* Background color */
-    color: #ffffff; /* Text color */
+    background-color: var(--SecondaryColor);
+    color: #ffffff;
 }
+
 
 .box-title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
-    text-align: center; /* Center the title */
+    text-align: center;
 }
 
 .box-text {
@@ -82,17 +96,12 @@ main {
     line-height: 1.6;
 }
 
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-    display: block;
     margin-bottom: 8px;
 }
 
@@ -452,4 +461,41 @@ button:hover {
     border-radius: 6px;
     padding: 10px;
     overflow-wrap: break-word;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 50px; /* Added margin-bottom to create more space at the bottom */
+}
+
+.contact-container form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.contact-container label {
+    font-weight: bold;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.contact-container button {
+    background-color: var(--TertiaryColor);
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-container button:hover {
+    background-color: #ccc;
 }

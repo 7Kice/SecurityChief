@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Web Page</title>
+    <title>Security test</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,6 +16,9 @@
 
     <main>
 
+    <div class="container">
+
+        <!-- Left Column: Information about Cybersecurity Tests -->
         <div class="info">
             <div class="box">
                 <div class="box-title">Waarom een cybersecurity-test</div>
@@ -39,52 +42,26 @@
             </div>
         </div>
 
-        <div class="container">
-            <h2>Cybersecurity test</h2>
+        <!-- Right Column: Form -->
+        <form action="#" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-            <?php 
-            require("create-database.php");
-            include('insert_data.php');
-            ?>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
 
-            <?php
-            // Check if the form is submitted
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                // Collect form data
-                $email = $_POST["email"];
-                $firstName = $_POST["firstName"];
-                $lastName = $_POST["lastName"];
-                $companyName = $_POST["companyName"];
-                $websiteUrl = $_POST["websiteUrl"];
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
 
-                // Display the collected data
-                echo "<p>Email: $email</p>";
-                echo "<p>First Name: $firstName</p>";
-                echo "<p>Last Name: $lastName</p>";
-                echo "<p>Company Name: $companyName</p>";
-                echo "<p>Website URL: $websiteUrl</p>";
-            }
-            ?>
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName">
 
-            <form action="#" method="post">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <label for="websiteUrl">Website URL:</label>
+            <input type="url" id="websiteUrl" name="websiteUrl">
 
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
-
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required>
-
-                <label for="companyName">Company Name:</label>
-                <input type="text" id="companyName" name="companyName">
-
-                <label for="websiteUrl">Website URL:</label>
-                <input type="url" id="websiteUrl" name="websiteUrl">
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
     </main>
 
