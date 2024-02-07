@@ -43,7 +43,7 @@
         </div>
 
         <!-- Right Column: Form -->
-        <form action="#" method="post">
+        <form action="insert_data.php" method="post">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 

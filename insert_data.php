@@ -13,8 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Insert data into the table
     $sql = "INSERT INTO security_test (email, firstName, lastName, companyName, websiteUrl) VALUES ('$email', '$firstName', '$lastName', '$companyName', '$websiteUrl')";
 
-    if ($db_conna->query($sql) === TRUE) {
-        echo "Data inserted successfully!";
+    if ($db_conn->query($sql) === TRUE) {
+        header("Location: securitytest.php");
+        exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
