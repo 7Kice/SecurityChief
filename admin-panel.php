@@ -10,6 +10,14 @@
 
 <body>
     <?php
+    session_start();
+
+    // Controleer of de gebruiker is ingelogd, anders stuur ze door naar de inlogpagina
+    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+        header("Location: login.php");
+        exit;
+    }
+
     include('header.php')
     ?>
     <div class="AdminContainer">
@@ -75,6 +83,10 @@
                     ?>
 
                 </div>
+
+            </div>
+            <div class="buttons">
+                <button type="button" class="delete">Delete</button>
             </div>
         </div>
     </div>

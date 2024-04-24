@@ -403,7 +403,7 @@ button:hover {
     grid-column: 1/3;
     border-radius: 6px;
     gap: 5px;
-    grid-template-columns: repeat(autofill, 1fr);
+    grid-template-columns: repeat(4, 1fr) 80px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     overflow-y: scroll;
     background-color: white;
@@ -438,6 +438,10 @@ button:hover {
     border-radius: 6px;
 }
 
+.buttons{
+
+}
+
 .FirstNameText,
 .LastNameText,
 .CompanyNameText,
@@ -464,6 +468,7 @@ button:hover {
 }
 
 .contact-container {
+    height: calc(100vh - 201px);
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
