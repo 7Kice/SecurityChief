@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashedPassword = $row["password"];
 
         if (password_verify($password, $hashedPassword)) {
+            $_SESSION['loggedin'] = true;
             header("Location: admin-panel.php");
             exit();
         } else {
