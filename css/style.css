@@ -143,10 +143,10 @@ button:hover {
 .image-overlay {
     position: absolute;
     top: 50%;
-    left: 35%;
+    left: 30%;
     transform: translate(-50%, -50%);
     color: #fff;
-    max-width: 60%;
+    max-width: 35%;
     text-align: left;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

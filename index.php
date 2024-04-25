@@ -20,7 +20,7 @@
     <div class="main-image">
         <div class="image-overlay">
             <h2>Security Cybercrime Test Site</h2>
-            <p>Discover our website to see what we can do for you!</p>
+            <p>The website includes cybercrime testing, an FAQ section, login, and contact features. Users can test their online security, find answers to common questions, log in for personalized content, and easily get in touch with the site administrators.</p>
         </div>
     </div>
 
